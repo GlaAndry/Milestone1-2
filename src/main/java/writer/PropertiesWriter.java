@@ -1,13 +1,19 @@
 package writer;
 
+import engine.DowloadCommit;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class PropertiesWriter {
 
     public static void main(String[] args){
+
+        final Logger LOGGER = Logger.getLogger(PropertiesWriter.class.getName());
 
         try (OutputStream output = new FileOutputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
 
@@ -22,10 +28,12 @@ public class PropertiesWriter {
             // save properties to project root folder
             prop.store(output, null);
 
-            System.out.println(prop);
+            String properties = String.valueOf(prop);
 
-        } catch (IOException io) {
-            io.printStackTrace();
+            LOGGER.log(Level.INFO, properties);
+
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
 }

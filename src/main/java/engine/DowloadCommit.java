@@ -65,7 +65,8 @@ public class DowloadCommit {
                 Git git = Git.open(new File(completePath));
 
                 Repository repository = FileRepositoryBuilder.create(new File(completePath));
-                LOGGER.info(String.valueOf(repository));
+                String repo = String.valueOf(repository);
+                LOGGER.info(repo);
                 List<Ref> branches = git.branchList().call();
                 for (Ref ref : branches)
                 {

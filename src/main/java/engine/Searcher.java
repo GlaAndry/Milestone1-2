@@ -5,6 +5,7 @@ import com.opencsv.CSVReader;
 
 import java.io.*;
 import java.util.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Searcher {
@@ -30,8 +31,8 @@ public class Searcher {
             resourcePath = prop.getProperty("resourcePath");
 
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
         ///////////////////////////////////////
 
@@ -49,7 +50,7 @@ public class Searcher {
                         fw.append("\n");
 
                     }catch (StringIndexOutOfBoundsException e){
-                        e.printStackTrace();
+                        LOGGER.log(Level.WARNING, String.valueOf(e));
                     }
 
 
@@ -74,7 +75,7 @@ public class Searcher {
             }
 
         } catch (StringIndexOutOfBoundsException e){
-            e.printStackTrace();
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
 
@@ -90,8 +91,8 @@ public class Searcher {
             resourcePath = prop.getProperty("resourcePath");
 
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
         ///////////////////////////////////////
 
@@ -118,7 +119,7 @@ public class Searcher {
             }
 
         } catch (IOException e){
-            e.printStackTrace();
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
 
     }
@@ -135,8 +136,8 @@ public class Searcher {
             resourcePath = prop.getProperty("resourcePath");
 
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
         ///////////////////////////////////////
 
@@ -161,7 +162,7 @@ public class Searcher {
             writer.writeAll(data);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
 
@@ -180,8 +181,8 @@ public class Searcher {
             resourcePath = prop.getProperty("resourcePath");
 
 
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
         ///////////////////////////////////////
 
@@ -247,7 +248,7 @@ public class Searcher {
             writer.writeAll(finlis);
         }
         catch (ArrayIndexOutOfBoundsException | IOException e) {
-            e.printStackTrace();
+            LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
 

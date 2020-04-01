@@ -20,7 +20,7 @@ public class RetriveTicket {
 
     public static final Logger LOGGER = Logger.getLogger(RetriveTicket.class.getName());
 
-    private static  String path = "";
+    private static String path = "";
     public static final String projName ="QPID";
 
 
@@ -106,7 +106,7 @@ public class RetriveTicket {
                     data.add(new String[] {key});
                 }
             } catch (NullPointerException | IOException | JSONPointerException e){
-                e.printStackTrace();
+                LOGGER.log(Level.WARNING, String.valueOf(e));
             }
 
             try(FileWriter outputfile = new FileWriter(file); CSVWriter writer = new CSVWriter(outputfile)) {
@@ -114,7 +114,7 @@ public class RetriveTicket {
                 writer.writeAll(data);
             }
             catch (IOException | JSONException e) {
-                e.printStackTrace();
+                LOGGER.log(Level.WARNING, String.valueOf(e));
             }
 
             LOGGER.info("Fatto!");

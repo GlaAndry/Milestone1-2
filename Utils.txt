@@ -1,0 +1,68 @@
+Classe DownloadCommit
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+                //ELEMENTI UTILI NON UTILIZZATI.....................
+                /*System.out.println(revCommit.getName());*/
+                //System.out.println("COMMIT : "+revCommit);
+                //System.out.println("COMMIT MESSAGE : "+revCommit.getFullMessage());
+
+                //System.out.println("AUTHOR NAME : "+revCommit.getAuthorIdent().getName());
+                //System.out.println("AUTHOR E-MAIL ID : "+revCommit.getAuthorIdent().getEmailAddress());
+                //System.out.println("DATE/TIME : "+revCommit.getAuthorIdent().getWhen());
+                /*
+                Status status=git.status().call();
+                System.out.println("added:"+status.getAdded());
+                System.out.println("removed:"+status.getRemoved());
+
+                TreeWalk treewalk = new TreeWalk(repository);
+                treewalk.addTree(tree);
+                treewalk.setRecursive(true);
+                while (treewalk.next())
+                {
+                    if(treewalk.getNameString().contains("QPID"))
+                        System.out.println("FILE COMMITTED : "+treewalk.getNameString());
+                }
+                */
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Quando ho modificato da java 6 a java 7 ho eseguito il recompile (click destro sulla classe) e tutto magicamente
+ha funzionato. (Ho anche aggiornato la versione all'interno di pom.xml)
+
+///////////////////////////////////////////
+
+/*
+            String url = "https://issues.apache.org/jira/rest/api/2/search?jql=project=%22"
+                    + projName + "%22AND%22issueType%22=%22Bug%22AND(%22status%22=%22closed%22OR"
+                    + "%22status%22=%22resolved%22)AND%22resolution%22=%22fixed%22&fields=key,resolutiondate,versions,created&startAt="
+                    + i.toString() + "&maxResults=" + j.toString();
+
+             */
+
+////////////////////////////////////////////
+
+
+public static JSONObject readJsonFromUrl(String url) throws IOException {
+        InputStream is = new URL(url).openStream();
+        try {
+            BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+            String jsonText = readAll(rd);
+            JSONObject json = new JSONObject(jsonText);
+            return json;
+        } finally {
+            is.close();
+        }
+    }
+/////////////////////////////////////////////////
+
+String path = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\commits.txt";
+    String path = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\finRes.csv";
+
+    String pathNewFile = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\NEWcommits.txt";
+    String pathFinalFile = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\FinalCommits.txt";
+    String testPath = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\test.txt";
+
+path1 = results
+path2 = Finres
+
+ String results = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\results.csv";
+        String FinRes = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\finRes.csv";

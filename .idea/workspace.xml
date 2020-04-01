@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c14f7d73-ebf2-4000-827d-d2b658cdb032" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/main/resources/GitDir" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Zl7qyi9d6qnw8LcZk8E5xV5gLa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../milestone1travisSonar/trunk" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alessio Mazzola\Desktop\Prove ISW2\Milestone1Maven\src\main\resources" />
+      <recent name="C:\Users\Alessio Mazzola\Desktop\Prove ISW2\Milestone1Maven\src\main\java" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Runner">
+    <configuration name="DowloadCommit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="engine.DowloadCommit" />
+      <module name="Milestone1Maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PropertiesWriter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="writer.PropertiesWriter" />
+      <module name="Milestone1Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="writer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RetriveTicket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="engine.RetriveTicket" />
+      <module name="Milestone1Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="external.Runner" />
+      <module name="Milestone1Maven" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Searcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="engine.Searcher" />
+      <module name="Milestone1Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="engine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Runner" />
+        <item itemvalue="Application.DowloadCommit" />
+        <item itemvalue="Application.Searcher" />
+        <item itemvalue="Application.RetriveTicket" />
+        <item itemvalue="Application.PropertiesWriter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c14f7d73-ebf2-4000-827d-d2b658cdb032" name="Default Changelist" comment="" />
+      <created>1585402021746</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585402021746</updated>
+      <workItem from="1585402023947" duration="104000" />
+      <workItem from="1585402141342" duration="179000" />
+      <workItem from="1585402331321" duration="21546000" />
+      <workItem from="1585435018250" duration="64000" />
+      <workItem from="1585475590743" duration="20131000" />
+      <workItem from="1585502500213" duration="337000" />
+      <workItem from="1585514697216" duration="2161000" />
+      <workItem from="1585600746355" duration="5240000" />
+      <workItem from="1585675266560" duration="8677000" />
+      <workItem from="1585731154410" duration="996000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/qpid" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3432" y="358" key="#Project_Structure" timestamp="1585515517733">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3432" y="358" key="#Project_Structure/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585515517733" />
+    <state x="3294" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585516151037">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3294" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585516151037" />
+    <state x="3645" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1585420144656">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3645" y="409" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585420144656" />
+    <state x="3466" y="625" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585684336545">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3466" y="625" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585684336545" />
+    <state x="3636" y="559" width="408" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585402660919">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3636" y="559" width="408" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585402660919" />
+    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585732203780">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732203780" />
+    <state x="3620" y="426" key="FileChooserDialogImpl" timestamp="1585691563191">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3620" y="426" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585691563191" />
+    <state width="1910" height="401" key="GridCell.Tab.0.bottom" timestamp="1585732208644">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1910" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732208644" />
+    <state width="1910" height="401" key="GridCell.Tab.0.center" timestamp="1585732208644">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1910" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732208644" />
+    <state width="1910" height="401" key="GridCell.Tab.0.left" timestamp="1585732208644">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1910" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732208644" />
+    <state width="1910" height="401" key="GridCell.Tab.0.right" timestamp="1585732208644">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1910" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732208644" />
+    <state x="3341" y="342" key="SettingsEditor" timestamp="1585683906357">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3341" y="342" key="SettingsEditor/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585683906357" />
+    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog" timestamp="1585731174731">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1252" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585402023931" />
+    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585731174731" />
+    <state x="3496" y="330" width="672" height="677" key="run.anything.popup" timestamp="1585732185099">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3496" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585732185099" />
+    <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1585484716814">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585484716814" />
+  </component>
+</project>

@@ -24,7 +24,7 @@ public class RetriveTicket {
     public static  String proj ="";
 
 
-    private void importResources(){
+    private static void importResources(){
         ////////////////carico i dati da config.properties
         try (InputStream input = new FileInputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
 

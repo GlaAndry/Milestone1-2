@@ -11,7 +11,7 @@ public class PropertiesWriter {
 
     public static void main(String[] args){
 
-        final Logger LOGGER = Logger.getLogger(PropertiesWriter.class.getName());
+        final Logger logger = Logger.getLogger(PropertiesWriter.class.getName());
 
         try (OutputStream output = new FileOutputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
 
@@ -30,10 +30,10 @@ public class PropertiesWriter {
 
             String properties = String.valueOf(prop);
 
-            LOGGER.log(Level.INFO, properties);
+            logger.log(Level.INFO, properties);
 
         } catch (IOException e) {
-            LOGGER.log(Level.WARNING, String.valueOf(e));
+            logger.log(Level.WARNING, String.valueOf(e));
         }
     }
 }

@@ -21,10 +21,6 @@ public class DowloadCommit {
 
     private static final Logger LOGGER = Logger.getLogger(DowloadCommit.class.getName());
 
-    //String path = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\GitDir";
-    //String commitPath = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\commits.txt";
-    //String completePath = "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\GitDir\\.git";
-
     String path = "";
     String commitPath = "";
     String completePath = "";
@@ -102,8 +98,8 @@ public class DowloadCommit {
 
     public static void main(String[] args) throws GitAPIException {
 
-        LOGGER.log(Level.INFO, "Scrivo tutti i commit eseguiti fino a questo momento all'interno del file.\\n");
+        LOGGER.info( "Scrivo tutti i commit eseguiti fino a questo momento all'interno del file.\n");
         new DowloadCommit().getAllCommits();
-        LOGGER.log(Level.INFO,"Fatto!!\n");
+        LOGGER.info("Fatto!!\n");
     }
 }

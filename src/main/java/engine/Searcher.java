@@ -14,9 +14,8 @@ public class Searcher {
 
     static String resourcePath = "";
     static String proj = "";
-    Integer linea  = 0;
 
-    private void importResources(){
+    private static void importResources(){
         ////////////////carico i dati da config.properties
         try (InputStream input = new FileInputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
 
@@ -49,34 +48,29 @@ public class Searcher {
     try(FileWriter fw = new FileWriter(resourcePath + "\\NEWCommits.txt") ;  Scanner scanner = new Scanner(file)){
         while (scanner.hasNextLine()){
             String line = scanner.nextLine();
-            linea++;
             if (line.contains("TIME")){
-                try{
-                    String tempo = line.substring(5,15);
-                    LOGGER.info(linea.toString());
-                    fw.append(tempo);
-                    fw.append("\n");
 
-                }catch (StringIndexOutOfBoundsException e){
-                    LOGGER.log(Level.WARNING, String.valueOf(e));
-                }
-
+                String tempo = line.substring(5,15); //Delimito la stringa per la data
+                fw.append(tempo);
+                fw.append("\n");
 
             } else if (line.contains("COMMIT:")) {
                 if(line.contains(proj)){
-                    try{
-                        LOGGER.info(String.valueOf(linea));
-                        String commmit = line.substring(7,18); //per QPID era 7-16
+
+                    try { //Try necessario, altrimenti se incontra un errore blocca l'applicazione (dovuto alla troppa variabilita' nei Ticket)
+                        String commmit = line.substring(7,18); //Delimito la stringa per il Ticket
                         fw.append(commmit);
                         fw.append("\n");
-
                     } catch (StringIndexOutOfBoundsException e){
                         e.printStackTrace();
                     }
+
+
                 }
-                    LOGGER.info("Nessun Parametro corrispondente nella linea: " + linea);
+                    LOGGER.log(Level.INFO, "Nessun Parametro corrispondente");
+
                 } else {
-                    LOGGER.info("Nessun Parametro corrispondente nella linea: " + linea);
+                    LOGGER.log(Level.INFO,"Nessun Parametro corrispondente");
                 }
 
             }
@@ -133,7 +127,9 @@ public class Searcher {
         File file = new File(resourcePath, "FinalCommits.txt");
         File file2 = new File(resourcePath, "finRes.csv");
 
-        try(Scanner scanner = new Scanner(file)){
+        try(Scanner scanner = new Scanner(file);
+            FileWriter outputfile = new FileWriter(file2);
+            CSVWriter writer = new CSVWriter(outputfile)){
 
             List<String[]> data = new ArrayList<>();
             String appoggio1 = "";
@@ -154,9 +150,6 @@ public class Searcher {
 
             }
             // create FileWriter object with file as parameter
-            FileWriter outputfile = new FileWriter(file2);
-            // create CSVWriter object filewriter object as parameter
-            CSVWriter writer = new CSVWriter(outputfile);
             writer.writeAll(data);
             writer.flush(); //NECESSARIO, altrimenti non vengono scritti tutti i record!
 
@@ -277,7 +270,7 @@ public class Searcher {
 
     public void compareCSV() throws IOException {
 
-        new Searcher().importResources();
+        importResources();
         new Searcher().lastIssue();
         new Searcher().removeElements();
         new Searcher().createTicketCSV();

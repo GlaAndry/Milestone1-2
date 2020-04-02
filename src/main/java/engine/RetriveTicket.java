@@ -21,7 +21,26 @@ public class RetriveTicket {
     public static final Logger LOGGER = Logger.getLogger(RetriveTicket.class.getName());
 
     private static String path = "";
-    public static final String projName ="QPID";
+    public static  String proj ="";
+
+
+    private void importResources(){
+        ////////////////carico i dati da config.properties
+        try (InputStream input = new FileInputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
+
+            Properties prop = new Properties();
+            // load a properties file
+            prop.load(input);
+
+            path = prop.getProperty("result.csv");
+            proj = prop.getProperty("projectName");
+
+
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
+        }
+        ///////////////////////////////////////
+    }
 
 
     public static String readAll(Reader rd) throws IOException {
@@ -61,21 +80,7 @@ public class RetriveTicket {
 
     public void retreive(){
 
-        ////////////////carico i dati da config.properties
-        try (InputStream input = new FileInputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
-
-            Properties prop = new Properties();
-            // load a properties file
-            prop.load(input);
-
-            path = prop.getProperty("result.csv");
-
-        } catch (IOException ex) {
-            LOGGER.log(Level.WARNING, String.valueOf(ex));
-        }
-        ///////////////////////////////////////
-
-
+        importResources();
         LOGGER.info("Scrivo i file su CSV!");
         File file = new File(path);
         List<String[]> data = new ArrayList<>();
@@ -89,7 +94,7 @@ public class RetriveTicket {
             j = i + 1000;
 
             String urlFixedNewFeature = "https://issues.apache.org/jira/rest/api/2/search?jql=project=%22"
-                    + projName + "%22AND%22issueType%22=%22New%20Feature%22AND(%22status%22=%22closed%22OR" //aggiornato a NEWFEATURE al posto di BUG
+                    + proj + "%22AND%22issueType%22=%22New%20Feature%22AND(%22status%22=%22closed%22OR" //aggiornato a NEWFEATURE al posto di BUG
                     + "%22status%22=%22resolved%22)AND%22resolution%22=%22fixed%22&fields=key,resolutiondate,versions,created&startAt="
                     + i.toString() + "&maxResults=" + j.toString();
 
@@ -112,6 +117,7 @@ public class RetriveTicket {
             try(FileWriter outputfile = new FileWriter(file); CSVWriter writer = new CSVWriter(outputfile)) {
                 //Scrivo i Dati ricavati sul file csv
                 writer.writeAll(data);
+                writer.flush();
             }
             catch (IOException | JSONException e) {
                 LOGGER.log(Level.WARNING, String.valueOf(e));
@@ -124,7 +130,9 @@ public class RetriveTicket {
 
 
     public static void main(String[] args) {
+
         new RetriveTicket().retreive();
+
     }
 
 

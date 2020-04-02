@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c14f7d73-ebf2-4000-827d-d2b658cdb032" name="Default Changelist" comment="" />
+    <list default="true" id="c14f7d73-ebf2-4000-827d-d2b658cdb032" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GitDir/community/mahout-mr/mr/src/images/logos/ mahout-powered.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GitDir/community/mahout-mr/mr/src/images/logos/ mahout-powered.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GitDir/community/mahout-mr/mr/src/images/logos/mahout-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GitDir/community/mahout-mr/mr/src/images/logos/mahout-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GitDir/website/docs/latest/distributed/spark-bindings/ScalaSparkBindings.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GitDir/website/docs/latest/distributed/spark-bindings/ScalaSparkBindings.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GitDir/website/users/sparkbindings/ScalaSparkBindings.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GitDir/website/users/sparkbindings/ScalaSparkBindings.pdf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,9 +121,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Runner" />
-        <item itemvalue="Application.DowloadCommit" />
-        <item itemvalue="Application.Searcher" />
         <item itemvalue="Application.RetriveTicket" />
+        <item itemvalue="Application.Searcher" />
+        <item itemvalue="Application.DowloadCommit" />
         <item itemvalue="Application.PropertiesWriter" />
       </list>
     </recent_temporary>
@@ -142,7 +147,9 @@
       <workItem from="1585514697216" duration="2161000" />
       <workItem from="1585600746355" duration="5240000" />
       <workItem from="1585675266560" duration="8677000" />
-      <workItem from="1585731154410" duration="3516000" />
+      <workItem from="1585731154410" duration="3919000" />
+      <workItem from="1585771311326" duration="2734000" />
+      <workItem from="1585815011104" duration="11589000" />
     </task>
     <servers />
   </component>
@@ -175,43 +182,49 @@
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
     <state x="3636" y="559" width="408" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585402660919" />
-    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585733816056">
+    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585853669687">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733816056" />
-    <state x="3620" y="426" key="FileChooserDialogImpl" timestamp="1585734671682">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state x="3570" y="446" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585853669687" />
+    <state x="1060" y="426" key="FileChooserDialogImpl" timestamp="1585734765133">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="1060" y="426" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585734765133" />
     <state x="3620" y="426" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585734671682" />
-    <state width="1910" height="401" key="GridCell.Tab.0.bottom" timestamp="1585733821080">
+    <state width="1908" height="401" key="GridCell.Tab.0.bottom" timestamp="1585854138358">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="1910" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733821080" />
-    <state width="1910" height="401" key="GridCell.Tab.0.center" timestamp="1585733821080">
+    <state width="1910" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585735076858" />
+    <state width="1908" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585854138358" />
+    <state width="1908" height="401" key="GridCell.Tab.0.center" timestamp="1585854138358">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="1910" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733821080" />
-    <state width="1910" height="401" key="GridCell.Tab.0.left" timestamp="1585733821080">
+    <state width="1910" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585735076858" />
+    <state width="1908" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585854138358" />
+    <state width="1908" height="401" key="GridCell.Tab.0.left" timestamp="1585854138358">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="1910" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733821080" />
-    <state width="1910" height="401" key="GridCell.Tab.0.right" timestamp="1585733821080">
+    <state width="1910" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585735076858" />
+    <state width="1908" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585854138358" />
+    <state width="1908" height="401" key="GridCell.Tab.0.right" timestamp="1585854138358">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state width="1910" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733821080" />
+    <state width="1910" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585735076858" />
+    <state width="1908" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585854138358" />
     <state x="3341" y="342" key="SettingsEditor" timestamp="1585683906357">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
     <state x="3341" y="342" key="SettingsEditor/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585683906357" />
-    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog" timestamp="1585731174731">
+    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog" timestamp="1585815022628">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="1252" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585402023931" />
-    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585731174731" />
-    <state x="3496" y="330" width="672" height="677" key="run.anything.popup" timestamp="1585733802322">
+    <state x="1252" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585771310945" />
+    <state x="3812" y="413" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585815022628" />
+    <state x="3496" y="330" width="672" height="677" key="run.anything.popup" timestamp="1585853839339">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
-    <state x="3496" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585733802322" />
+    <state x="936" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1585734749916" />
+    <state x="3496" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1585853839339" />
     <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1585484716814">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>

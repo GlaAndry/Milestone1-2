@@ -28,6 +28,7 @@ public class DowloadCommit {
     String path = "";
     String commitPath = "";
     String completePath = "";
+    String gitUrl = "";
 
     public void getAllCommits() throws GitAPIException {
 
@@ -41,6 +42,7 @@ public class DowloadCommit {
             path = prop.getProperty("gitDirPath");
             commitPath = prop.getProperty("commitPath");
             completePath = prop.getProperty("gitPath");
+            gitUrl = prop.getProperty("gitUrl");
 
         } catch (IOException ex) {
             LOGGER.log(Level.WARNING, String.valueOf(ex));
@@ -53,7 +55,7 @@ public class DowloadCommit {
             LOGGER.info("Comando: Clone Repository");
             dir.mkdir();
             Git.cloneRepository()
-                    .setURI("https://github.com/apache/qpid.git")
+                    .setURI("https://github.com/apache/mahout")
                     .setDirectory(dir)
                     .call();
             LOGGER.info("Clone Repository eseguito correttamente.\n\n");

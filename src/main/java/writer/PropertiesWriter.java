@@ -1,7 +1,5 @@
 package writer;
 
-import engine.DowloadCommit;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,6 +23,8 @@ public class PropertiesWriter {
             prop.setProperty("gitPath", "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\GitDir\\.git");
             prop.setProperty("result.csv", "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\results.csv");
             prop.setProperty("resourcePath", "C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources");
+            prop.setProperty("projectName", "MAHOUT");
+            prop.setProperty("gitUrl", "https://github.com/apache/mahout.git");
             // save properties to project root folder
             prop.store(output, null);
 

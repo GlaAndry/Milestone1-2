@@ -5,7 +5,6 @@ import engine.RetriveTicket;
 import engine.Searcher;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
-import java.io.File;
 import java.io.IOException;
 
 public class Runner {

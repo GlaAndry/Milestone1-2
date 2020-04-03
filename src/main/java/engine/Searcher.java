@@ -16,7 +16,10 @@ public class Searcher {
     static String proj = "";
 
     private static void importResources(){
-        ////////////////carico i dati da config.properties
+        /**
+         * Attraverso config.properties andiamo a caricare i valori delle stringhe per le open e le write dei file.
+         * Necessario al fine di evitare copie inutili dello stesso codice in locazioni diverse della classe.
+         */
         try (InputStream input = new FileInputStream("C:\\Users\\Alessio Mazzola\\Desktop\\Prove ISW2\\Milestone1Maven\\src\\main\\resources\\config.properties")) {
 
             Properties prop = new Properties();
@@ -30,7 +33,6 @@ public class Searcher {
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, String.valueOf(e));
         }
-        ///////////////////////////////////////
     }
 
 
@@ -54,28 +56,31 @@ public class Searcher {
                 fw.append(tempo);
                 fw.append("\n");
 
-            } else if (line.contains("COMMIT:")) {
-                if(line.contains(proj)){
-
-                    try { //Try necessario, altrimenti se incontra un errore blocca l'applicazione (dovuto alla troppa variabilita' nei Ticket)
+            }
+            else if (line.contains("COMMIT:")) {
+                if(line.contains(proj) && line.length() > 20){
+                    /**
+                     * Il controllo sulla lunghezza è necessario altrimenti potrei avere un StringIndexOutOfBound
+                     * o NoSuchElementException. Questo problema è causato dalla variabilità dei commit e dal
+                     * mancato utilizzo dello standard. (Ad esempio quando non si specifica il ticket o si fa un
+                     * commit senza commento)
+                     */
                         String commmit = line.substring(7,18); //Delimito la stringa per il Ticket
                         fw.append(commmit);
                         fw.append("\n");
-                    } catch (StringIndexOutOfBoundsException e){
-                        e.printStackTrace();
-                    }
-
 
                 }
                     LOGGER.log(Level.INFO, "Nessun Parametro corrispondente");
 
-                } else {
-                    LOGGER.log(Level.INFO,"Nessun Parametro corrispondente");
-                }
-
+            } else {
+                LOGGER.log(Level.INFO,"Nessun Parametro corrispondente");
             }
 
-        } catch (StringIndexOutOfBoundsException e){
+
+
+        }
+
+        } catch (StringIndexOutOfBoundsException | NoSuchElementException e){
             LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
@@ -96,8 +101,8 @@ public class Searcher {
                 //Compongo un file che al suo interno ha solo coppie DATA - Ticket
                 String line = scanner.nextLine();
                 String line2 = scanner.nextLine();
-                /*Necessario in quanto se eseguo scanner.nextline() automaticamente salta alla linea successiva anche line,
-                 * Quindi vado avanti a controllare a due a due.
+                /**Necessario in quanto se eseguo scanner.nextline() automaticamente salta alla linea successiva anche
+                 * la stringa line, quindi vado avanti a controllare a due a due.
                  * */
 
                 if((Character.isDigit(line.charAt(0)) && line2.contains(proj))){
@@ -197,7 +202,7 @@ public class Searcher {
 
 
 
-    private void removeDuplicatesFromCSV() {
+    private ArrayList<String[]> removeDuplicatesFromCSV() {
 
         /**
          * Restituisce l'intersezione tra i ticket ricavati da Jira e quelli ricavati
@@ -205,19 +210,16 @@ public class Searcher {
          * in modo da poterlo utilizzare per andare a creare un grafico.
          */
 
+        ArrayList<String[]> lista = new ArrayList<>();
+
         try(FileReader filereader1 = new FileReader(resourcePath + "\\finRes2.csv");
             FileReader fileReader2 = new FileReader(resourcePath + "\\results.csv");
             CSVReader csvReader1 = new CSVReader(filereader1);
             CSVReader csvReader2 = new CSVReader(fileReader2);
-            FileWriter fileWriter = new FileWriter(resourcePath + "\\RisultatiFinali.csv");
-            CSVWriter writer = new CSVWriter(fileWriter)) {
+            ) {
             // Create an object of file reader
             // class with CSV file as a parameter.
             // create csvReader object and skip first Line
-
-            ArrayList<String[]> lista = new ArrayList<>();
-            ArrayList<String[]> finlis = new ArrayList<>();
-
 
             List<String[]> uno = csvReader1.readAll();
             List<String[]> due = csvReader2.readAll();
@@ -231,7 +233,7 @@ public class Searcher {
              */
             int cont = 0;
 
-            for (String[] record1 : uno) { // scorro finRes.csv
+            for (String[] record1 : uno) { // scorro finRes2.csv
                 for(String[] record2: due){ //scorro results.csv
                     if (record1[1].equals(record2[0])) {
                         if (cont == 0){
@@ -242,11 +244,30 @@ public class Searcher {
                 }
                 cont = 0;
             }
+            return lista;
+        }
+        catch (ArrayIndexOutOfBoundsException | IOException e) {
+            LOGGER.log(Level.WARNING, String.valueOf(e));
+        }
+        return lista;
+    }
+
+    private void finalResults(ArrayList<String[]> list){
+
+        /**
+         * Questa parte è necessaria in quanto adesso nella lista ci sono solamente determinati ticket
+         * (In particolari quelli ricavati tra l'intersezione tra finRes2 e results. A questo punto andiamo a
+         * prendere solamente il ticket più aggiornato, non considerando gli altri.
+         */
+
+        int cont = 0;
+        ArrayList<String[]> finlis = new ArrayList<>();
+        try(FileWriter fileWriter = new FileWriter(resourcePath + "\\RisultatiFinali.csv");
+            CSVWriter writer = new CSVWriter(fileWriter)){
 
             String appoggio = ""; // Stringa di appoggio per determinare un valore in comune.
-
-            for(String[] lis : lista){
-                for (String[] lis2 : lista){
+            for(String[] lis : list){
+                for (String[] lis2 : list){
                     if (lis[1].equals(lis2[1])) {
                         if (cont == 0){
                             appoggio = lis2[1];
@@ -259,10 +280,10 @@ public class Searcher {
                     cont = 0;
                 }
             }
+
             writer.writeAll(finlis);
             writer.flush();
-        }
-        catch (ArrayIndexOutOfBoundsException | IOException e) {
+        } catch (ArrayIndexOutOfBoundsException | IOException e){
             LOGGER.log(Level.WARNING, String.valueOf(e));
         }
     }
@@ -275,7 +296,7 @@ public class Searcher {
         new Searcher().removeElements();
         new Searcher().createTicketCSV();
         new Searcher().removeSpaceseCSV();
-        new Searcher().removeDuplicatesFromCSV();
+        new Searcher().finalResults(new Searcher().removeDuplicatesFromCSV());
 
     }
 

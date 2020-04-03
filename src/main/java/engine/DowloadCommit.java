@@ -17,8 +17,6 @@ import java.util.logging.Logger;
 
 public class DowloadCommit {
 
-
-
     private static final Logger LOGGER = Logger.getLogger(DowloadCommit.class.getName());
 
     String path = "";

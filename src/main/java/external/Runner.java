@@ -29,7 +29,5 @@ public class Runner {
         dowloadCommit.getAllCommits();
         searcher.compareCSV();
 
-
-
     }
 }

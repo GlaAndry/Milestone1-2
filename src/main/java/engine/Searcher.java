@@ -398,11 +398,11 @@ public class Searcher {
     public void compareCSV() throws IOException {
 
         importResources();
-//        new Searcher().lastIssue();
-//        new Searcher().removeElements();
-//        new Searcher().createTicketCSV();
-//        new Searcher().removeSpaceseCSV();
-//        new Searcher().finalResults(new Searcher().removeDuplicatesFromCSV());
+        new Searcher().lastIssue();
+        new Searcher().removeElements();
+        new Searcher().createTicketCSV();
+        new Searcher().removeSpaceseCSV();
+        new Searcher().finalResults(new Searcher().removeDuplicatesFromCSV());
         new Searcher().countOccurrences(filterCSVByDate());
 
     }

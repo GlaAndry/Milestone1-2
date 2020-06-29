@@ -16,6 +16,7 @@ public class Searcher {
 
     static String resourcePath = "";
     static String proj = "";
+    static String finalRes = "";
 
     private SimpleDateFormat format = new SimpleDateFormat("MM/yyyy");
 
@@ -33,7 +34,7 @@ public class Searcher {
 
             resourcePath = prop.getProperty("resourcePath");
             proj = prop.getProperty("projectName");
-
+            finalRes = resourcePath + "\\RisultatiFinali.csv";
 
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, String.valueOf(e));
@@ -260,7 +261,7 @@ public class Searcher {
 
         int cont = 0;
         ArrayList<String[]> finlis = new ArrayList<>();
-        try (FileWriter fileWriter = new FileWriter(resourcePath + "\\RisultatiFinali.csv");
+        try (FileWriter fileWriter = new FileWriter(finalRes);
              CSVWriter writer = new CSVWriter(fileWriter)) {
 
             String appoggio = ""; // Stringa di appoggio per determinare un valore in comune.
@@ -297,7 +298,7 @@ public class Searcher {
 
         Integer[] returnInt = new Integer[2];
 
-        try (FileReader fileReader = new FileReader(resourcePath + "\\RisultatiFinali.csv");
+        try (FileReader fileReader = new FileReader(finalRes);
              CSVReader csvReader = new CSVReader(fileReader)) {
 
             list = csvReader.readAll();
@@ -362,7 +363,7 @@ public class Searcher {
 
         List<String[]> anotherList = new ArrayList<>();
 
-        try (FileReader fileReader = new FileReader(resourcePath + "\\RisultatiFinali.csv");
+        try (FileReader fileReader = new FileReader(finalRes);
              CSVReader csvReader = new CSVReader(fileReader);
              FileWriter fileWriter = new FileWriter(resourcePath + "\\counterTicket.csv");
              CSVWriter csvWriter = new CSVWriter(fileWriter)) {
@@ -397,11 +398,11 @@ public class Searcher {
     public void compareCSV() throws IOException {
 
         importResources();
-        new Searcher().lastIssue();
-        new Searcher().removeElements();
-        new Searcher().createTicketCSV();
-        new Searcher().removeSpaceseCSV();
-        new Searcher().finalResults(new Searcher().removeDuplicatesFromCSV());
+//        new Searcher().lastIssue();
+//        new Searcher().removeElements();
+//        new Searcher().createTicketCSV();
+//        new Searcher().removeSpaceseCSV();
+//        new Searcher().finalResults(new Searcher().removeDuplicatesFromCSV());
         new Searcher().countOccurrences(filterCSVByDate());
 
     }
